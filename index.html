@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafetería de Santi</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Cafetería de Santi</h1>
+        <p>Administrá los productos de nuestra cafetería</p>
+    </header>
+
+    <main>
+        <section class="panel">
+            <h2>Agregar producto</h2>
+
+            <form id="formulario">
+                <label for="nombre">Nombre</label>
+                <input id="nombre" type="text" placeholder="Ejemplo: Tostado">
+
+                <label for="precio">Precio</label>
+                <input id="precio" type="number" min="0.01" step="0.01">
+
+                <label for="stock">Stock</label>
+                <input id="stock" type="number" min="0" step="1">
+
+                <button id="botonAgregar" type="button">Agregar producto</button>
+            </form>
+
+            <p id="mensaje" role="status" aria-live="polite"></p>
+        </section>
+
+        <section class="panel">
+            <h2>Productos disponibles</h2>
+
+            <label for="busqueda">Buscar por nombre</label>
+            <input id="busqueda" type="search" placeholder="Escribí para buscar">
+
+            <p id="cantidadProductos"></p>
+
+            <div id="contenedorProductos" class="productos"></div>
+        </section>
+    </main>
+</body>
+</html>
